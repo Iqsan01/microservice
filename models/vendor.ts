@@ -3,14 +3,14 @@ import mongoose, { Schema, Document, Model } from "mongoose";
 interface vendorDoc extends Document {
   name: string;
   ownerName: string;
-  footType: [string];
+  foodType: [string];
   pincode: string;
   address: string;
   phone: string;
   email: string;
   password: string;
   salt: string;
-  serviceAvaliable: string;
+  serviceAvaliable: boolean;
   coverImage: [string];
   rating: number;
 //   foods: any;
@@ -20,7 +20,7 @@ const vendorSchema = new Schema(
   {
     name: { type: String, required: true },
     ownerName: { type: String, required: true },
-    footType: { type: [String] },
+    foodType: { type: [String] },
     pincode: { type: String, required: true },
     address: { type: String },
     phone: { type: String, required: true },
